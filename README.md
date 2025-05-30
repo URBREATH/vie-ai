@@ -94,7 +94,7 @@ docker-compose restart
 
 The Docker image (`registry.urbreath.tech/vie-ai:v1`) contains:
 - Complete VIE-AI application source code
-- Pre-trained machine learning models (`flooding_model_components.pkl`)
+- Pre-trained machine learning dummy models (`flooding_model_components.pkl`)
 - All required datasets (CSV files)
 - Configured Python environment with all dependencies
 
