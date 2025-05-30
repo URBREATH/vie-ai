@@ -1,0 +1,11 @@
+services:
+  dashboard:
+    image: registry.urbreath.tech/vie-ai:v1
+    ports:
+      - "${DASHBOARD_PORT}:${DASHBOARD_PORT}"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - DATA_PATH=${METEO_DATA_PATH}
+      - SOIL_DATA_PATH=${SOIL_DATA_PATH}
+      - DASHBOARD_PORT=${DASHBOARD_PORT}
