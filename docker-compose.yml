@@ -1,0 +1,49 @@
+services:
+  dashboard:
+    image: registry.urbreath.tech/vie-ai:v2
+    container_name: xai-dashboard
+    ports:
+      - "${HOMEPAGE_PORT}:8050"
+      - "${FLOODING_PORT}:8060"
+      - "${CLASSIFICATION_PORT}:8061"
+      - "${FICLIMA_PORT}:8062"
+      - "${INFILTRATION_PORT}:8063"
+    volumes:
+      - ./data:/app/data
+      - ./saved_model:/app/saved_model
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    environment:
+      - METEO_DATA_PATH=${METEO_DATA_PATH}
+      - SOIL_DATA_PATH=${SOIL_DATA_PATH}
+      - FICLIMA_DATA_PATH=${FICLIMA_DATA_PATH}
+      - INFILTRATION_DATA_PATH=${INFILTRATION_DATA_PATH}
+      - FLOODING_MODEL_PATH=${FLOODING_MODEL_PATH}
+      - IRIS_MODEL_PATH=${IRIS_MODEL_PATH}
+      - FICLIMA_MODEL_PATH=${FICLIMA_MODEL_PATH}
+      - INFILTRATION_MODEL_PATH=${INFILTRATION_MODEL_PATH}
+      - DASHBOARD_PORT=${HOMEPAGE_PORT}
+      - DASH_ENV=${DASH_ENV}
+      - PYTHONPATH=${PYTHONPATH}
+    restart: unless-stopped
+    networks:
+      - dashboard-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: xai-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - dashboard
+    restart: unless-stopped
+    networks:
+      - dashboard-network
+
+networks:
+  dashboard-network:
+    driver: bridge
