@@ -6,7 +6,7 @@ This repository contains the deployment configuration for the VIE-AI XAI Dashboa
 ## Prerequisites
 
 - Docker and Docker Compose installed
-- Access to the URBREATH container registry (`registry.urbreath.tech`)
+- Access to the URBREATH container registry 
 
 ## Quick Start
 
