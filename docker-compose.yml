@@ -1,27 +1,32 @@
 services:
   dashboard:
-    image: registry.urbreath.tech/vie-ai:v2
+    image: registry.urbreath.tech/vie-ai:v3
     container_name: xai-dashboard
     ports:
       - "${HOMEPAGE_PORT}:8050"
       - "${FLOODING_PORT}:8060"
-      - "${CLASSIFICATION_PORT}:8061"
+      - "${UHI_RF_PORT}:8061"
       - "${FICLIMA_PORT}:8062"
       - "${INFILTRATION_PORT}:8063"
+      - "${UHI_RF_PORT}:8064"
     volumes:
-      - ./data:/app/data
-      - ./saved_model:/app/saved_model
+     # - ./data:/app/data
+     # - ./saved_model:/app/saved_model
       - ./logs:/app/logs
       - ./.env:/app/.env
     environment:
+      - BASE_URL=${BASE_URL}
       - METEO_DATA_PATH=${METEO_DATA_PATH}
       - SOIL_DATA_PATH=${SOIL_DATA_PATH}
       - FICLIMA_DATA_PATH=${FICLIMA_DATA_PATH}
       - INFILTRATION_DATA_PATH=${INFILTRATION_DATA_PATH}
+      - UHI_DATA_PATH=${UHI_DATA_PATH}
       - FLOODING_MODEL_PATH=${FLOODING_MODEL_PATH}
-      - IRIS_MODEL_PATH=${IRIS_MODEL_PATH}
+      # - IRIS_MODEL_PATH=${IRIS_MODEL_PATH}
       - FICLIMA_MODEL_PATH=${FICLIMA_MODEL_PATH}
       - INFILTRATION_MODEL_PATH=${INFILTRATION_MODEL_PATH}
+      - UHI_MODEL_PATH=${UHI_MODEL_PATH}
+      - SVC_UHI_MODEL_PATH=${SVC_UHI_MODEL_PATH}
       - DASHBOARD_PORT=${HOMEPAGE_PORT}
       - DASH_ENV=${DASH_ENV}
       - PYTHONPATH=${PYTHONPATH}
