@@ -42,7 +42,7 @@ These routes are managed and proxied to specific internal ports by Nginx.
 ## Built Image Registry
 
 - Registry URL: ```registry.urbreath.tech```
-- Image Name: registry.urbreath.tech/vie-ai:v3
+- Image Name: ```registry.urbreath.tech/vie-ai:v3```
 - Version: `V3.0`
 
 ## License
