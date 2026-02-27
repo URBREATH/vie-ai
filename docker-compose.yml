@@ -1,6 +1,6 @@
 services:
   dashboard:
-    image: registry.urbreath.tech/vie-ai:v3
+    image: ghcr.io/urbreath/vie-ai:v3
     container_name: xai-dashboard
     ports:
       - "${HOMEPAGE_PORT}:8050"
