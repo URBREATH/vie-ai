@@ -14,20 +14,30 @@ The VIE-AI Dashboard provides interactive explainable AI interfaces for multiple
 
 ## Installation Instructions
 
-1. Clone this repository:
+#### 1. Clone the Repository
+
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/URBREATH/vie-ai.git
 ```
 
-2. Edit the `.env` file to specify ports, data and, model paths.
-
-3. Start the application:
+#### 2. Login to GitHub Container Registry
 ```bash
+docker login ghcr.io -u YOUR_GITHUB_USERNAME
+```
+
+#### 3. Run the API
+```bash
+docker pull ghcr.io/urbreath/vie-ai:v3
+
 docker-compose up -d
-```
 
-4. Access the dashboards:
+# Check container status
+docker-compose ps
+
+# Check logs
+docker-compose logs -f
+
+#### 4. Access the dashboards:
 
 - Homepage: `https://vie-ai-dev.urbreath.tech/`
 - Flooding: `https://vie-ai-dev.urbreath.tech/flooding/`
