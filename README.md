@@ -25,7 +25,7 @@ git clone https://github.com/URBREATH/vie-ai.git
 docker login ghcr.io -u YOUR_GITHUB_USERNAME
 ```
 
-#### 3. Run the API
+#### 3. Run the dashboard
 ```bash
 docker pull ghcr.io/urbreath/vie-ai:v3
 
@@ -36,6 +36,7 @@ docker-compose ps
 
 # Check logs
 docker-compose logs -f
+```
 
 #### 4. Access the dashboards:
 
