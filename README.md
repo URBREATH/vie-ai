@@ -10,7 +10,7 @@ The VIE-AI Dashboard provides interactive explainable AI interfaces for multiple
 ## Installation Prerequisites
 
 - Docker and Docker Compose installed
-- Access to the URBREATH container registry: ```registry.urbreath.tech```
+- Access to the URBREATH container registry: ```ghcr.io/urbreath```
 
 ## Installation Instructions
 
@@ -40,8 +40,8 @@ These routes are managed and proxied to specific internal ports by Nginx.
 
 ## Built Image Registry
 
-- Registry URL: ```registry.urbreath.tech```
-- Image Name: ```registry.urbreath.tech/vie-ai:v3```
+- Registry URL: ```ghcr.io/urbreath```
+- Image Name: ```ghcr.io/urbreath/vie-ai:v3```
 - Version: `V3.0`
 
 ## License
