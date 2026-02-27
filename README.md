@@ -13,7 +13,6 @@ The VIE-AI Dashboard provides interactive explainable AI interfaces for multiple
 - Access to the URBREATH container registry: ```registry.urbreath.tech```
 
 ## Installation Instructions
-VIE-AI Dashboard - Installation Instructions
 
 1. Clone this repository:
 ```bash
