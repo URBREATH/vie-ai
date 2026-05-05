@@ -3,6 +3,10 @@
 
 Provided by: **EXUS**
 
+### Contact:
+- Ettore Ettenzi: e.ettenzi@exus.ai
+- Cristina Nichiforov: c.nichiforov@exus.ai
+
 ## Description
 
 The VIE-AI Dashboard provides interactive explainable AI interfaces for multiple models, including flooding prediction, classification (ICCS models), temperature anomalies (FiClima model), and infiltration modeling. It handles data processing from CSV files, feature engineering, machine learning model loading (e.g., Random Forest, Gradient Boosting), and XAI explanations via dashboards proxied by Nginx.
