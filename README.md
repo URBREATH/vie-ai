@@ -56,8 +56,8 @@ These routes are managed and proxied to specific internal ports by Nginx.
 ## Built Image Registry
 
 - Registry URL: ```ghcr.io/urbreath```
-- Image Name: ```ghcr.io/urbreath/vie-ai:v3```
-- Version: `V3.0`
+- Image Name: ```ghcr.io/urbreath/vie-ai:v3.2```
+- Version: `V3.2`
 
 ## License
 This tool is licensed under Proprietary Software Licence - End-User License Agreement (EULA).
