@@ -31,7 +31,7 @@ docker login ghcr.io -u YOUR_GITHUB_USERNAME
 
 #### 3. Run the dashboard
 ```bash
-docker pull ghcr.io/urbreath/vie-ai:v3
+docker pull ghcr.io/urbreath/vie-ai:v3.2
 
 docker-compose up -d
 
